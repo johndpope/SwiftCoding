@@ -12,7 +12,7 @@ import XCTest
 private extension String {
 
     func hasUniqueCharacters() -> Bool {
-        return Set(Array(self)).count == self.count
+        return Set(self).count == self.count
     }
 }
 
