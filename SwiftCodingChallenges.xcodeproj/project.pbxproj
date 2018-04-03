@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3D54E892073482D00D401F4 /* Challenge_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D54E882073482D00D401F4 /* Challenge_01.swift */; };
 		E3FF1B83207342BE004B7862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF1B82207342BE004B7862 /* AppDelegate.swift */; };
 		E3FF1B85207342BE004B7862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF1B84207342BE004B7862 /* ViewController.swift */; };
 		E3FF1B88207342BE004B7862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FF1B86207342BE004B7862 /* Main.storyboard */; };
 		E3FF1B8A207342BF004B7862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FF1B89207342BF004B7862 /* Assets.xcassets */; };
 		E3FF1B8D207342BF004B7862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FF1B8B207342BF004B7862 /* LaunchScreen.storyboard */; };
-		E3FF1B98207342C0004B7862 /* SwiftCodingChallengesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF1B97207342C0004B7862 /* SwiftCodingChallengesTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E3D54E882073482D00D401F4 /* Challenge_01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_01.swift; sourceTree = "<group>"; };
 		E3FF1B7F207342BE004B7862 /* SwiftCodingChallenges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCodingChallenges.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FF1B82207342BE004B7862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3FF1B84207342BE004B7862 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		E3FF1B8C207342BF004B7862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3FF1B8E207342BF004B7862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3FF1B93207342C0004B7862 /* SwiftCodingChallengesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCodingChallengesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3FF1B97207342C0004B7862 /* SwiftCodingChallengesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCodingChallengesTests.swift; sourceTree = "<group>"; };
 		E3FF1B99207342C0004B7862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E3D54E8A2073486F00D401F4 /* Chapter_01 */ = {
+			isa = PBXGroup;
+			children = (
+				E3D54E882073482D00D401F4 /* Challenge_01.swift */,
+			);
+			path = Chapter_01;
+			sourceTree = "<group>";
+		};
 		E3FF1B76207342BE004B7862 = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +98,7 @@
 		E3FF1B96207342C0004B7862 /* SwiftCodingChallengesTests */ = {
 			isa = PBXGroup;
 			children = (
-				E3FF1B97207342C0004B7862 /* SwiftCodingChallengesTests.swift */,
+				E3D54E8A2073486F00D401F4 /* Chapter_01 */,
 				E3FF1B99207342C0004B7862 /* Info.plist */,
 			);
 			path = SwiftCodingChallengesTests;
@@ -148,6 +156,7 @@
 					};
 					E3FF1B92207342C0004B7862 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 						TestTargetID = E3FF1B7E207342BE004B7862;
 					};
 				};
@@ -205,7 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3FF1B98207342C0004B7862 /* SwiftCodingChallengesTests.swift in Sources */,
+				E3D54E892073482D00D401F4 /* Challenge_01.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +401,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftCodingChallengesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -401,6 +411,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pman215.SwiftCodingChallengesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftCodingChallenges.app/SwiftCodingChallenges";
@@ -412,6 +423,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftCodingChallengesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
