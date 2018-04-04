@@ -12,8 +12,8 @@ import XCTest
 private extension String {
 
     func isPalindrome() -> Bool {
-        let originalStr = Array(self.uppercased())
-        let reversedStr = Array(originalStr.reversed())
+        let originalStr = self.uppercased()
+        let reversedStr = String(originalStr.reversed())
         return originalStr == reversedStr
     }
 
