@@ -34,6 +34,10 @@ private extension String {
             }
         }
     }
+
+    func condenseRegEx() -> String {
+        return replacingOccurrences(of: " +", with: " ", options: .regularExpression, range: nil)
+    }
 }
 
 class Challenge_07: XCTestCase {
@@ -41,15 +45,32 @@ class Challenge_07: XCTestCase {
     func test01() {
         XCTAssertEqual("a   b   c".condenseSpaces(), "a b c")
         XCTAssertEqual("a   b   c".condense(), "a b c")
+        XCTAssertEqual("a   b   c".condenseRegEx(), "a b c")
     }
 
     func test02() {
         XCTAssertEqual("    a".condenseSpaces(), " a")
         XCTAssertEqual("    a".condense(), " a")
+        XCTAssertEqual("    a".condenseRegEx(), " a")
     }
 
     func test03() {
         XCTAssertEqual("abc".condenseSpaces(), "abc")
         XCTAssertEqual("abc".condense(), "abc")
+        XCTAssertEqual("abc".condenseRegEx(), "abc")
+    }
+
+    func testP01() {
+        let input = String(repeating: "   a", count: 10)
+        measure {
+            _ = input.condenseSpaces()
+        }
+    }
+
+    func testP02() {
+        let input = String(repeating: "   a", count: 10)
+        measure {
+            _ = input.condense()
+        }
     }
 }
