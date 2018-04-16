@@ -1,5 +1,5 @@
 //
-//  Chapter_16.swift
+//  Challenge_16.swift
 //  SwiftCodingChallengesTests
 //
 //  Created by Erick Andrade on 4/13/18.

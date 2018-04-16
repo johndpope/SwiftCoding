@@ -44,8 +44,5 @@ class Challenge_14: XCTestCase {
         XCTAssertEqual("ab".allPermutations(), ["ab", "ba"])
         XCTAssertEqual("abc".allPermutations(), ["abc", "acb", "bac", "bca", "cab", "cba"])
         XCTAssertEqual("wombat".allPermutations().count, 720)
-        "wombat".allPermutations().forEach {
-            print($0)
-        }
     }
 }
