@@ -13,6 +13,7 @@
 		E34AE171207511BF001B431C /* Challenge_03.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34AE170207511BF001B431C /* Challenge_03.swift */; };
 		E34AE173207522D8001B431C /* Challenge_04.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34AE172207522D8001B431C /* Challenge_04.swift */; };
 		E366A448207FA16D0011C6E1 /* Challenge_14.swift in Sources */ = {isa = PBXBuildFile; fileRef = E366A447207FA16D0011C6E1 /* Challenge_14.swift */; };
+		E366D5FA20843F19001C4082 /* Chapter_17.swift in Sources */ = {isa = PBXBuildFile; fileRef = E366D5F920843F19001C4082 /* Chapter_17.swift */; };
 		E381BB072073C33D0029BBFB /* Challenge_02.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381BB062073C33D0029BBFB /* Challenge_02.swift */; };
 		E39918AA2080E70D00538B65 /* Challenge_15.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39918A92080E70D00538B65 /* Challenge_15.swift */; };
 		E39918AD2080EDF500538B65 /* Chapter_16.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39918AC2080EDF500538B65 /* Chapter_16.swift */; };
@@ -47,6 +48,7 @@
 		E34AE170207511BF001B431C /* Challenge_03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_03.swift; sourceTree = "<group>"; };
 		E34AE172207522D8001B431C /* Challenge_04.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_04.swift; sourceTree = "<group>"; };
 		E366A447207FA16D0011C6E1 /* Challenge_14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_14.swift; sourceTree = "<group>"; };
+		E366D5F920843F19001C4082 /* Chapter_17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter_17.swift; sourceTree = "<group>"; };
 		E381BB062073C33D0029BBFB /* Challenge_02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_02.swift; sourceTree = "<group>"; };
 		E39918A92080E70D00538B65 /* Challenge_15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_15.swift; sourceTree = "<group>"; };
 		E39918AC2080EDF500538B65 /* Chapter_16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter_16.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				E39918AC2080EDF500538B65 /* Chapter_16.swift */,
+				E366D5F920843F19001C4082 /* Chapter_17.swift */,
 			);
 			path = Chapter_02;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				E39918AD2080EDF500538B65 /* Chapter_16.swift in Sources */,
 				E39918AA2080E70D00538B65 /* Challenge_15.swift in Sources */,
 				E32155632076671500078806 /* Challenge_06.swift in Sources */,
+				E366D5FA20843F19001C4082 /* Chapter_17.swift in Sources */,
 				E3EE35E7207CFAD200292E31 /* Challenge_11.swift in Sources */,
 				E34AE173207522D8001B431C /* Challenge_04.swift in Sources */,
 				E32155612076615600078806 /* Challenge_05.swift in Sources */,
