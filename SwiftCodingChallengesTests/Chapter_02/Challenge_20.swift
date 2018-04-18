@@ -25,14 +25,15 @@ func isPrime01(_ x: Int) -> Bool {
 }
 
 func isPrime02(_ x: Int) -> Bool {
-    guard x > 1 else { return false }
+    guard x >= 2 else { return false }
+    guard x != 2 else { return true }
 
     let lowerLimit = Int(ceil(sqrt(Double(x))))
 
-    var dividend = x - 1
-    while dividend >= lowerLimit {
+    var dividend = 2
+    while dividend <= lowerLimit {
         if x % dividend == 0 { return false }
-        dividend -= 1
+        dividend += 1
     }
 
     return true
@@ -67,7 +68,7 @@ class Challenge_20: XCTestCase {
         XCTAssertFalse(isPrime02(0))
         XCTAssertFalse(isPrime02(1))
         XCTAssertTrue(isPrime02(2))
-        XCTAssertTrue(isPrime01(3))
+        XCTAssertTrue(isPrime02(3))
         XCTAssertFalse(isPrime02(4))
         XCTAssertTrue(isPrime02(5))
         XCTAssertFalse(isPrime02(6))
@@ -82,5 +83,17 @@ class Challenge_20: XCTestCase {
         XCTAssertTrue(isPrime02(997))
         XCTAssertFalse(isPrime02(6398))
         XCTAssertTrue(isPrime02(16777259))
+    }
+
+    func testP01() {
+        measure {
+            isPrime01(16777259)
+        }
+    }
+
+    func testP02() {
+        measure {
+            isPrime02(16777259)
+        }
     }
 }
