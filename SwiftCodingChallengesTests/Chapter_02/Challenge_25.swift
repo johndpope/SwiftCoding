@@ -54,6 +54,39 @@ fileprivate func largestMultiplier(target: Int, accumulator: Int) -> (multiplier
 
 }
 
+func sqrRoot2(_ x: Int) -> Int {
+    guard x != 1 else { return 1 }
+    let limit = (x / 2) + 1
+    for i in 0 ... limit {
+        if i * i > x {
+            return i - 1
+        }
+    }
+    return 0
+}
+
+func sqrRoot3(_ x: Int) -> Int {
+    guard x != 1 else { return 1 }
+
+    var lowerBound = 0
+    var upperBound = (x / 2) + 1
+    var midBound = 0
+
+    while lowerBound + 1 < upperBound {
+        midBound = lowerBound + ((upperBound - lowerBound) / 2)
+        let square = midBound * midBound
+
+        if square < x {
+            lowerBound = midBound
+        } else if square > x {
+            upperBound = midBound
+        } else {
+            return midBound
+        }
+    }
+    return lowerBound
+}
+
 class Challenge_25: XCTestCase {
 
     func testTuples() {
@@ -82,5 +115,26 @@ class Challenge_25: XCTestCase {
         XCTAssertEqual(sqrRoot(16), 4)
         XCTAssertEqual(sqrRoot(15), 3)
         XCTAssertEqual(sqrRoot(780), 27)
+        XCTAssertEqual(sqrRoot(0), 0)
+        XCTAssertEqual(sqrRoot(1), 1)
+    }
+
+    func test02() {
+        XCTAssertEqual(sqrRoot2(16777216),4096)
+        XCTAssertEqual(sqrRoot2(16), 4)
+        XCTAssertEqual(sqrRoot2(15), 3)
+        XCTAssertEqual(sqrRoot2(780), 27)
+        XCTAssertEqual(sqrRoot2(0), 0)
+        XCTAssertEqual(sqrRoot2(1), 1)
+    }
+
+    func test03() {
+        XCTAssertEqual(sqrRoot3(0), 0)
+        XCTAssertEqual(sqrRoot3(1), 1)
+        XCTAssertEqual(sqrRoot3(4), 2)
+        XCTAssertEqual(sqrRoot3(15), 3)
+        XCTAssertEqual(sqrRoot3(16), 4)
+        XCTAssertEqual(sqrRoot3(780), 27)
+        XCTAssertEqual(sqrRoot3(16777216),4096)
     }
 }
