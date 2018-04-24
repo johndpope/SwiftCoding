@@ -87,6 +87,10 @@ func sqrRoot3(_ x: Int) -> Int {
     return lowerBound
 }
 
+func sqrRoot4(_ x: Int) -> Int {
+    return Int(floor(pow(Double(x), 0.5)))
+}
+
 class Challenge_25: XCTestCase {
 
     func testTuples() {
@@ -137,4 +141,14 @@ class Challenge_25: XCTestCase {
         XCTAssertEqual(sqrRoot3(780), 27)
         XCTAssertEqual(sqrRoot3(16777216),4096)
     }
+    func test04() {
+        XCTAssertEqual(sqrRoot4(0), 0)
+        XCTAssertEqual(sqrRoot4(1), 1)
+        XCTAssertEqual(sqrRoot4(4), 2)
+        XCTAssertEqual(sqrRoot4(15), 3)
+        XCTAssertEqual(sqrRoot4(16), 4)
+        XCTAssertEqual(sqrRoot4(780), 27)
+        XCTAssertEqual(sqrRoot4(16777216),4096)
+    }
+
 }
