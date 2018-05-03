@@ -10,16 +10,6 @@ import XCTest
 /// Write a function that accepts the name of a directory to scan, and returns an array containing the name of any executable files in there.
 
 private func executableFiles(in url: URL) -> [String] {
-//    do {
-//        let keys: [URLResourceKey] = [.isExecutableKey]
-//        return try onlyFiles(in: url).filter { url in
-//            let values = try url.resourceValues(forKeys: Set(keys))
-//            return values.isExecutable ?? false
-//            }
-//            .map { $0.lastPathComponent }
-//    } catch {
-//        return []
-//    }
     return onlyFiles(in: url).filter { url in
         return FileManager.default.isExecutableFile(atPath: url.path)
         }
@@ -29,7 +19,7 @@ private func executableFiles(in url: URL) -> [String] {
 private func onlyFiles(in url: URL) -> [URL] {
     let fileManager = FileManager.default
     do {
-        let keys: [URLResourceKey] = [.isExecutableKey, .isDirectoryKey, .isRegularFileKey]
+        let keys: [URLResourceKey] = [.isRegularFileKey]
         let allContent = try fileManager.contentsOfDirectory(at: url, includingPropertiesForKeys: keys, options: [])
         return try allContent.filter { url in
             let values = try url.resourceValues(forKeys: Set(keys))
@@ -98,6 +88,5 @@ class Challenge_34: XCTestCase {
             let url = destination.appendingPathComponent(filename)
             try? FileManager.default.removeItem(at: url)
         }
-
     }
 }
