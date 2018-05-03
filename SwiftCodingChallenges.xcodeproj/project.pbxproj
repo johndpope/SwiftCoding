@@ -41,6 +41,7 @@
 		E3EE35E7207CFAD200292E31 /* Challenge_11.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE35E6207CFAD200292E31 /* Challenge_11.swift */; };
 		E3EE35E9207D006000292E31 /* Challenge_12.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE35E8207D006000292E31 /* Challenge_12.swift */; };
 		E3EF1B8C209ACBBE00A61BC8 /* Challenge_34.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EF1B8B209ACBBE00A61BC8 /* Challenge_34.swift */; };
+		E3F58E8A209B4077001803F9 /* Challenge_35.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F58E89209B4077001803F9 /* Challenge_35.swift */; };
 		E3F733192077B7A000E7DE73 /* Challenge_08.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F733182077B7A000E7DE73 /* Challenge_08.swift */; };
 		E3F7331B2077BE2400E7DE73 /* Challenge_09.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7331A2077BE2400E7DE73 /* Challenge_09.swift */; };
 		E3FF1B83207342BE004B7862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF1B82207342BE004B7862 /* AppDelegate.swift */; };
@@ -95,6 +96,7 @@
 		E3EE35E6207CFAD200292E31 /* Challenge_11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_11.swift; sourceTree = "<group>"; };
 		E3EE35E8207D006000292E31 /* Challenge_12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_12.swift; sourceTree = "<group>"; };
 		E3EF1B8B209ACBBE00A61BC8 /* Challenge_34.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_34.swift; sourceTree = "<group>"; };
+		E3F58E89209B4077001803F9 /* Challenge_35.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_35.swift; sourceTree = "<group>"; };
 		E3F733182077B7A000E7DE73 /* Challenge_08.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_08.swift; sourceTree = "<group>"; };
 		E3F7331A2077BE2400E7DE73 /* Challenge_09.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_09.swift; sourceTree = "<group>"; };
 		E3FF1B7F207342BE004B7862 /* SwiftCodingChallenges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCodingChallenges.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +158,7 @@
 				E3BEC43E2097553A00F73DD7 /* Challenge_32.swift */,
 				E35C7CEE209970CD006297D9 /* Challenge_33.swift */,
 				E3EF1B8B209ACBBE00A61BC8 /* Challenge_34.swift */,
+				E3F58E89209B4077001803F9 /* Challenge_35.swift */,
 			);
 			path = Chapter_03;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				E3F733192077B7A000E7DE73 /* Challenge_08.swift in Sources */,
 				E3D03D512086FF69000F5B92 /* Challenge_21.swift in Sources */,
 				E38CF41B2084D6720069452A /* Challenge_19.swift in Sources */,
+				E3F58E8A209B4077001803F9 /* Challenge_35.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
