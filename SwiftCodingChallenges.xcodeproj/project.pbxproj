@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E30F997F20A1D6B600E184CA /* Challenge_39.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30F997E20A1D6B600E184CA /* Challenge_39.swift */; };
+		E30F998120A1DA6000E184CA /* Challenge_40.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30F998020A1DA6000E184CA /* Challenge_40.swift */; };
 		E31FDF552092247D00AD1E23 /* Challenge_29.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31FDF542092247D00AD1E23 /* Challenge_29.swift */; };
 		E32155612076615600078806 /* Challenge_05.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32155602076615600078806 /* Challenge_05.swift */; };
 		E32155632076671500078806 /* Challenge_06.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32155622076671500078806 /* Challenge_06.swift */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		E30F997E20A1D6B600E184CA /* Challenge_39.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_39.swift; sourceTree = "<group>"; };
+		E30F998020A1DA6000E184CA /* Challenge_40.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_40.swift; sourceTree = "<group>"; };
 		E31FDF542092247D00AD1E23 /* Challenge_29.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_29.swift; sourceTree = "<group>"; };
 		E32155602076615600078806 /* Challenge_05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_05.swift; sourceTree = "<group>"; };
 		E32155622076671500078806 /* Challenge_06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_06.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				E3E1DC86209EC73700AAB83A /* Challenge_37.swift */,
 				E3E5244420A08E0B00A82DBB /* Challenge_38.swift */,
 				E30F997E20A1D6B600E184CA /* Challenge_39.swift */,
+				E30F998020A1DA6000E184CA /* Challenge_40.swift */,
 			);
 			path = Chapter_04;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				E34AE173207522D8001B431C /* Challenge_04.swift in Sources */,
 				E366D5FC20844660001C4082 /* Challenge_18.swift in Sources */,
 				E35C7CEF209970CD006297D9 /* Challenge_33.swift in Sources */,
+				E30F998120A1DA6000E184CA /* Challenge_40.swift in Sources */,
 				E32155612076615600078806 /* Challenge_05.swift in Sources */,
 				E3A0822C207B9D06005AF3F3 /* Challenge_10.swift in Sources */,
 				E3E5244520A08E0B00A82DBB /* Challenge_38.swift in Sources */,
