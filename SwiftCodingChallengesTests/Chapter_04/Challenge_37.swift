@@ -21,18 +21,36 @@ private extension Int {
 
     func count(of digit: Int) -> Int {
         var count = 0
-        var dividend = self
-        var remainder = 0
-        var temp = dividend / 10
-
-        repeat {
-            temp = dividend / 10
-            remainder = dividend % 10
-            if remainder == digit { count += 1 }
-            dividend = temp
-        } while temp > 0
-
+        var iterator = NumberIterator(self)
+        while let aDigit = iterator.next() {
+            if aDigit == digit { count += 1 }
+        }
         return count
+    }
+}
+
+public struct NumberIterator: IteratorProtocol {
+
+    var dividend: Int?
+    var remainder = 0
+
+    init(_ number : Int) {
+        self.dividend = number
+    }
+
+    public mutating func next() -> Int? {
+        guard let dividend = dividend else { return nil }
+
+        let temp = dividend / 10
+        remainder = dividend % 10
+
+        if temp == 0 {
+            self.dividend = nil
+        } else {
+            self.dividend = temp
+        }
+
+        return remainder
     }
 }
 
