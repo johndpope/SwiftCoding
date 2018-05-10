@@ -9,7 +9,7 @@ import XCTest
 
 /// Write an extension to collections that accepts an array of Int and returns the median average, or nil if there are no values.
 
-extension Collection where Element == Int{
+private extension Collection where Element == Int{
 
     func median() -> Double? {
         guard !isEmpty else {
