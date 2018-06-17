@@ -40,6 +40,19 @@ private indirect enum TreeNode<T: Comparable> {
         }
     }
 
+    var isBalanced: Bool {
+        switch self {
+        case .empty:
+            return true
+        case let .node(leftNode: lhs, value: _, rightNode: rhs):
+            let lhsDepth = lhs.depth
+            let rhsDepth = rhs.depth
+            return abs(lhsDepth - rhsDepth) <= 1 &&
+                lhs.isBalanced &&
+                rhs.isBalanced
+        }
+    }
+
     var description: String {
         switch self {
         case .empty:
@@ -61,14 +74,7 @@ private struct Tree<T: Comparable> {
     }
 
     var isBalanced: Bool {
-        switch head {
-        case .empty:
-            return true
-        case .node(leftNode: let lhs, value: _, rightNode: let rhs):
-            let lhsDepth = lhs.depth
-            let rhsDepth = rhs.depth
-            return abs(lhsDepth-rhsDepth) <= 1
-        }
+        return head.isBalanced
     }
 
     var description: String {
@@ -88,14 +94,14 @@ class Challenge_54: XCTestCase {
         tree = Tree(values: 5, 1, 7, 6, 2, 1, 9, 1)
         XCTAssertTrue(tree.isBalanced)
 
-        tree = Tree(values: 5, 1, 7, 6, 2, 1, 9, 1, 3)
-        XCTAssertTrue(tree.isBalanced)
-
         tree = Tree(values: 50, 25, 100, 26, 101, 24, 99)
         XCTAssertTrue(tree.isBalanced)
 
         tree = Tree(values: 1)
         XCTAssertTrue(tree.isBalanced)
+
+        tree = Tree(values: 5, 1, 7, 6, 2, 1, 9, 1, 3)
+        XCTAssertFalse(tree.isBalanced)
 
         tree = Tree(values: 1, 2, 3, 4, 5)
         XCTAssertFalse(tree.isBalanced)
