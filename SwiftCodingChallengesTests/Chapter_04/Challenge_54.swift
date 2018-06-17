@@ -82,6 +82,68 @@ private struct Tree<T: Comparable> {
     }
 }
 
+private class Node<T> {
+    let value: T
+    var rightNode: Node?
+    var leftNode: Node?
+
+    init(value: T) {
+        self.value = value
+    }
+
+    var height: Int {
+        return 1 + max(leftNode?.height ?? 0 , rightNode?.height ?? 0)
+    }
+
+    var isBalanced: Bool {
+        let lhsHeight = leftNode?.height ?? 0
+        let rhsHeight = rightNode?.height ?? 0
+        return abs(lhsHeight - rhsHeight) <= 1 &&
+            leftNode?.isBalanced ?? true &&
+            rightNode?.isBalanced ?? true
+    }
+}
+
+private class BinaryTree<T: Comparable> {
+
+    private var root: Node<T>? = nil
+
+    init(values: T...) {
+        values.forEach(insert)
+    }
+
+    func insert(value: T) {
+        var runnerNode = root
+
+        while let node = runnerNode {
+            if value < node.value {
+                if node.leftNode == nil { break }
+                runnerNode = node.leftNode
+            } else if value > node.value {
+                if node.rightNode == nil { break }
+                runnerNode = node.rightNode
+            } else {
+                return
+            }
+        }
+
+        guard let insertNode = runnerNode else {
+            root = Node(value: value)
+            return
+        }
+
+        if value < insertNode.value {
+            insertNode.leftNode = Node(value: value)
+        } else if value > insertNode.value {
+            insertNode.rightNode = Node(value: value)
+        }
+    }
+
+    var isBalanced: Bool {
+        return root?.isBalanced ?? true
+    }
+}
+
 class Challenge_54: XCTestCase {
 
     func test01() {
@@ -113,6 +175,38 @@ class Challenge_54: XCTestCase {
         XCTAssertTrue(tree2.isBalanced)
 
         tree2 = Tree(values: "f", "d", "c", "e", "a", "b")
+        XCTAssertFalse(tree2.isBalanced)
+    }
+
+    func test02() {
+        var tree = BinaryTree(values: 2,1,3)
+        XCTAssertTrue(tree.isBalanced)
+
+        tree = BinaryTree(values: 5, 1, 7, 6, 2, 1, 9)
+        XCTAssertTrue(tree.isBalanced)
+
+        tree = BinaryTree(values: 5, 1, 7, 6, 2, 1, 9, 1)
+        XCTAssertTrue(tree.isBalanced)
+
+        tree = BinaryTree(values: 50, 25, 100, 26, 101, 24, 99)
+        XCTAssertTrue(tree.isBalanced)
+
+        tree = BinaryTree(values: 1)
+        XCTAssertTrue(tree.isBalanced)
+
+        tree = BinaryTree(values: 5, 1, 7, 6, 2, 1, 9, 1, 3)
+        XCTAssertFalse(tree.isBalanced)
+
+        tree = BinaryTree(values: 1, 2, 3, 4, 5)
+        XCTAssertFalse(tree.isBalanced)
+
+        tree = BinaryTree(values: 10, 5, 4, 3, 2, 1, 11, 12, 13, 14, 15)
+        XCTAssertFalse(tree.isBalanced)
+
+        var tree2: BinaryTree<Character> = BinaryTree(values: "k", "t", "d", "a", "z", "m", "f")
+        XCTAssertTrue(tree2.isBalanced)
+
+        tree2 = BinaryTree(values: "f", "d", "c", "e", "a", "b")
         XCTAssertFalse(tree2.isBalanced)
     }
 }
