@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3027CAC20DA03AB004F4FE8 /* Challenge_56.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3027CAB20DA03AB004F4FE8 /* Challenge_56.swift */; };
 		E30F997F20A1D6B600E184CA /* Challenge_39.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30F997E20A1D6B600E184CA /* Challenge_39.swift */; };
 		E30F998120A1DA6000E184CA /* Challenge_40.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30F998020A1DA6000E184CA /* Challenge_40.swift */; };
 		E31FDF552092247D00AD1E23 /* Challenge_29.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31FDF542092247D00AD1E23 /* Challenge_29.swift */; };
@@ -82,6 +83,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E3027CAB20DA03AB004F4FE8 /* Challenge_56.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_56.swift; sourceTree = "<group>"; };
 		E30F997E20A1D6B600E184CA /* Challenge_39.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_39.swift; sourceTree = "<group>"; };
 		E30F998020A1DA6000E184CA /* Challenge_40.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_40.swift; sourceTree = "<group>"; };
 		E31FDF542092247D00AD1E23 /* Challenge_29.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_29.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				E328797120D5F5CD00FC9C4F /* Challenge_55.swift */,
+				E3027CAB20DA03AB004F4FE8 /* Challenge_56.swift */,
 			);
 			path = Chapter_05;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				E31FDF552092247D00AD1E23 /* Challenge_29.swift in Sources */,
 				E3D47EBD20AD40F200F36E49 /* Challenge_47.swift in Sources */,
 				E3EE35E9207D006000292E31 /* Challenge_12.swift in Sources */,
+				E3027CAC20DA03AB004F4FE8 /* Challenge_56.swift in Sources */,
 				E3CBCF9020A40E1A00C64ED0 /* Challenge_41.swift in Sources */,
 				E382953B208995D3009FEC5D /* Challenge_23.swift in Sources */,
 				E3529AD320AB203A001A20BC /* Challenge_46.swift in Sources */,
