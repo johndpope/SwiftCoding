@@ -59,7 +59,6 @@ private extension Array where Element: Comparable {
         return reduce(Array(), { (result, value) -> Array in
             var result = result
             result.swapInsert(value: value)
-            print(result)
             return result
         })
     }
@@ -76,6 +75,38 @@ private extension Array where Element: Comparable {
             } else {
                 return
             }
+        }
+    }
+
+    func insertionSort4() -> Array {
+        var sortedArray = self
+
+        let startPosition = sortedArray.startIndex + 1
+        let endPosition = sortedArray.endIndex
+
+        guard endPosition > startPosition else {
+                return sortedArray
+        }
+
+        (startPosition ..< endPosition).forEach { position in
+            sortedArray.insertSortValue(at: position)
+        }
+
+        return sortedArray
+    }
+
+    mutating func insertSortValue(at index: Int) {
+        var shouldSort = true
+        var index = index
+        while index > 0 && shouldSort {
+            let rhs = self[index-1]
+            let lhs = self[index]
+            if rhs > lhs {
+                swapAt(index-1, index)
+            } else {
+                shouldSort = false
+            }
+            index -= 1
         }
     }
  }
@@ -104,5 +135,14 @@ class Challenge_56: XCTestCase {
         XCTAssertEqual([12,5,4,9,3,2,1].insertionSort3(), [1,2,3,4,5,9,12])
         XCTAssertEqual(["f", "a", "b"].insertionSort3(), ["a", "b", "f"])
         XCTAssertEqual([1,2,3].insertionSort3(), [1,2,3])
+    }
+
+    func test4() {
+        XCTAssertEqual([Int]().insertionSort4(), [])
+        XCTAssertEqual([10].insertionSort4(), [10])
+        XCTAssertEqual([12,5,4,9,3,2,1].insertionSort4(), [1,2,3,4,5,9,12])
+        XCTAssertEqual(["f", "a", "b"].insertionSort4(), ["a", "b", "f"])
+        XCTAssertEqual([1,2,3].insertionSort4(), [1,2,3])
+        XCTAssertEqual([6,1,3,4,7,5,2].insertionSort4(), [1,2,3,4,5,6,7])
     }
 }
