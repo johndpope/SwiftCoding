@@ -24,27 +24,19 @@ private extension Array where Element: Comparable {
             return self
         }
 
-        var pivotIndex = (end - 1)
-        let pivot = self[pivotIndex]
+        var pivotIndex = start
+        let pivot = self[(end - 1)]
         var runner = start
 
         while runner < end {
             let value = self[runner]
-            if value <= pivot {
-                if runner < pivotIndex {
-                } else {
-                    swapAt(runner, pivotIndex)
-                    pivotIndex = runner
-                }
-            } else {
-                if runner < pivotIndex {
-                    swapAt(runner, pivotIndex)
-                    pivotIndex = runner
-                } else {
-                }
+            if value < pivot {
+                swapAt(runner, pivotIndex)
+                pivotIndex += 1
             }
             runner += 1
         }
+        swapAt((end - 1), pivotIndex)
 
         _ = quickSort(start: start, end: pivotIndex)
         _ = quickSort(start: pivotIndex+1, end: end)
@@ -61,4 +53,10 @@ class Challenge_59: XCTestCase {
         XCTAssertEqual(["f", "a", "b"].quickSort(), ["a", "b", "f"])
     }
 
+    func test2() {
+        let input = (0..<10).map { _ in arc4random_uniform(100) }
+        print(input)
+        let output = input.quickSort()
+        XCTAssertEqual(output, input.sorted())
+    }
 }
