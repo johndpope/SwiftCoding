@@ -88,6 +88,73 @@ private struct Board {
     }
 }
 
+public struct TicTacToe {
+
+    typealias Position = (x: Int, y: Int)
+
+    private let values: [[String]]
+
+    init(values: [[String]]) {
+        self.values = values
+    }
+
+    private let rows: [[Position]] = {
+        (0...2).map {
+            [
+                Position(x: 0, y: $0),
+                Position(x: 1, y: $0),
+                Position(x: 2, y: $0)
+            ]
+        }
+    }()
+
+    private let columns: [[Position]] = {
+        (0...2).map {
+            [
+                Position(x: $0, y: 0),
+                Position(x: $0, y: 1),
+                Position(x: $0, y: 2)
+            ]
+        }
+    }()
+
+    private let diagonals: [[Position]] = {
+        [
+            [Position(x: 0, y: 0), Position(x: 1, y: 1), Position(x: 2, y: 2)],
+            [Position(x: 2, y: 2), Position(x: 0, y: 0), Position(x: 0, y: 0)]
+        ]
+    }()
+
+    private func values(for unit: [Position]) -> [String] {
+        return unit.map { position in
+            values[position.y][position.x]
+        }
+    }
+
+    private func isWin(values: [String]) -> Bool {
+        guard let first = values.first,
+            !first.isEmpty,
+            first.rangeOfCharacter(from: CharacterSet.whitespaces) == nil else {
+                return false
+        }
+
+        for value in values {
+            if value != first { return false }
+        }
+
+        return true
+    }
+
+    var isWin: Bool {
+        for units in [rows, columns, diagonals] {
+            for unit in units {
+                if isWin(values: values(for: unit)) { return true }
+            }
+        }
+        return false
+    }
+}
+
 
 class Challenge_60: XCTestCase {
 
@@ -108,4 +175,23 @@ class Challenge_60: XCTestCase {
         XCTAssertFalse(board.isWin)
     }
 
+    func test2() {
+        var board = TicTacToe(values: [["X", "", "O"], ["", "X", "O"], ["", "", "X"]])
+        XCTAssertTrue(board.isWin)
+
+        board = TicTacToe(values: [["X", "", "O"], ["X", "", "O"], ["X", "", ""]])
+        XCTAssertTrue(board.isWin)
+
+        board = TicTacToe(values: [["", "X", ""], ["O", "X", ""], ["O", "X", ""]])
+        XCTAssertTrue(board.isWin)
+
+        board = TicTacToe(values: [["", "X", ""], ["O", "X", ""], ["O", "", "X"]])
+        XCTAssertFalse(board.isWin)
+
+        board = TicTacToe(values: [["", "", ""], ["", "", ""], ["", "", ""]])
+        XCTAssertFalse(board.isWin)
+
+        board = TicTacToe(values: [[" ", " ", " "], [" ", " ", " "], ["", "", ""]])
+        XCTAssertFalse(board.isWin)
+    }
 }
